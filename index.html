@@ -11,26 +11,38 @@
 	<link rel="stylesheet" href="lib/font-awesome/4.7.0/css/font-awesome.css">
 	<!-- Bootstrap cdn -->
 	<link rel="stylesheet" href="lib/bootstrap/3.3.7/css/bootstrap.min.css">
+	<link rel="stylesheet" href="https://cdn.rawgit.com/balzss/luxbar/ae5835e2/build/luxbar.min.css">
 	<link rel="stylesheet" href="assets/css/owl.carousel.min.css">
 	<link rel="stylesheet" href="assets/css/styles.css">
 	<!--Script-->
-	<script src="libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src="lib/jquery/3.3.1/jquery.min.js"></script>
 	<script src="lib/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 	<script src="assets/js/owl.carousel.min.js"></script>
 	<script src="assets/js/w3-include-html.js"></script>
 	<script src="assets/js/script.js"></script>
 </head>
 
-<body>
-	<div w3-include-html="_header-white.html"></div>
-
-	<div id="gHdr" class="container-fluid t-hm-hdr">
-		<div class="t-hm-hdr-logo">
-			<a href="index.html">
-				<img id="gHdrLogo" class="img-responsive" src="assets/img/siteicon.png" alt="Bhumi Logo">
-			</a>
-		</div>
+<header id="luxbar" class="luxbar-fixed">
+	<input type="checkbox" class="luxbar-checkbox" id="luxbar-checkbox" />
+	<div class="luxbar-menu luxbar-menu-right luxbar-menu-dark">
+		<ul class="luxbar-navigation">
+			<li class="luxbar-header">
+				<a href="#" class="luxbar-brand"><img src="assets/img/siteicon.png" style="width: 15%; height: 15%" alt="Bhumi Logo"></a> <label class="luxbar-hamburger luxbar-hamburger-doublespin" id="luxbar-hamburger" for="luxbar-checkbox"> <span></span>
+				</label>
+			</li>
+			<li class="luxbar-item"><a href="index.html">Home</a></li>
+      <li class="luxbar-item"><a href="public/about.html">About</a></li>
+      <li class="luxbar-item"><a href="public/donate.html">Donate</a></li>
+      <li class="luxbar-item"><a href="public/general-donation.html">General Donation</a></li>
+		</ul>
 	</div>
+</header>
+
+<body>
+	<!--
+					<a href="#" class="luxbar-brand"><img src="assets/img/siteicon.png" style="width: 15%; height: 15%" alt="Bhumi Logo"></a>
+-->
+
 
 	<div class="g-black-bg">
 		<div class="t-hm-bnr-bg-video">
