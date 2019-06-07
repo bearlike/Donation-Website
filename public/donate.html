@@ -2,24 +2,29 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Donate | Bhumi Donation Platform</title>
-  <link rel="icon" type="image/png" href="../assets/img/siteicon.png">
-  <link href="https://fonts.googleapis.com/css?family=Poppins:400,400i,500,500i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css?family=Playfair+Display:400,400i,700,700i,900,900i" rel="stylesheet">
-  <link rel="stylesheet" href="../lib/bootstrap/3.3.7/css/bootstrap.min.css">
-  <link rel="stylesheet" href="../assets/css/styles.css">
-  <link rel="stylesheet" href="../lib/font-awesome/4.7.0/css/font-awesome.css">
-  <link rel="stylesheet" href="https://cdn.rawgit.com/balzss/luxbar/ae5835e2/build/luxbar.min.css">
+    <title>Donate | Bhumi Donation Platform</title>
+    <meta charset="UTF-8">
+    <meta name="description" content=" Bhumi | Donation">
+    <meta name="keywords" content="Bhumi, Donation, creative, html">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Favicon -->
+    <link href="../assets/img/logo.png" rel="shortcut icon" />
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css?family=Josefin+Sans:300,300i,400,400i,700,700i" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Poppins:400,400i,500,500i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="../lib/bootstrap/3.3.7/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="https://cdn.rawgit.com/balzss/luxbar/ae5835e2/build/luxbar.min.css">
+		<link rel="stylesheet" href="../lib/font-awesome/4.7.0/css/font-awesome.css">
+    <link rel="stylesheet" href="../assets/css/donate.css" />
 </head>
-
 <header id="luxbar" class="luxbar-fixed">
   <input type="checkbox" class="luxbar-checkbox" id="luxbar-checkbox" />
   <div class="luxbar-menu luxbar-menu-right luxbar-menu-dark">
     <ul class="luxbar-navigation">
       <li class="luxbar-header">
-        <a href="#" class="luxbar-brand"><img src="../assets/img/siteicon.png" style="width: 15%; height: 15%" alt="Bhumi Logo"></a> <label class="luxbar-hamburger luxbar-hamburger-doublespin" id="luxbar-hamburger" for="luxbar-checkbox"> <span></span>
+        <a href="#" class="luxbar-brand"><img src="../assets/img/logo.png" style="width: 40%; height: 40%" alt="Bhumi Logo"></a> <label class="luxbar-hamburger luxbar-hamburger-doublespin" id="luxbar-hamburger" for="luxbar-checkbox">
+          <span></span>
         </label>
       </li>
       <li class="luxbar-item"><a href="../index.html">Home</a></li>
@@ -31,10 +36,101 @@
 </header>
 
 <body>
-  <!--I'm super lazy :P-->
-  <br><br><br><br>
-  [Donate Page] This page is under construction <br>
-  Come back soon :)
+  <br><br><br><br> <!-- Too Lazy to CSS -->
+    <!-- product section -->
+    <section class="donate-section">
+        <div class="container">
+
+            <div class="row">
+                <div class="col-lg-6">
+                    <div>
+                        <img src="../assets/img/child.png" style="height: 450px;" alt="Bhumi - Child picture here">
+                        <h5 style="padding-top: 30px;">"I'm Tony Sethupathy and I'm a mechanic"</h5><br>
+                    </div>
+
+                </div>
+                <div class="col-lg-6 donate-details">
+
+                    <div class="p-review">
+                        <label>Name</label>
+                        <h4 id="category">Tony Sethupathy</h4>
+                    </div>
+                    <div class="p-review">
+                        <label>Fund Raised</label>
+                        <h4 id="fundRaised">Rs. 6969</h4>
+
+                    </div>
+                    <div class="p-review">
+                        <label>Fund Target</label>
+                        <h4 id="fundTarget">Rs. 10000</h4>
+                    </div>
+                    <div class="p-review">
+                        <label>Views</label>
+                        <h4 id="views">420</h4>
+                    </div>
+                    <div class="p-review">
+                        <label>Claps</label>
+                        <h4 class="claps">69</h4><img src="../assets/img/clap.png" onClick="incrementClap()" style="width:30px; height:30px; cursor: pointer;">
+                    </div>
+                    <a href="#" class="site-btn">Donate Now</a>
+                    <div id="accordion" class="accordion-area">
+                        <div class="panel">
+                            <div class="panel-header" id="headingOne">
+                                <button class="panel-link active" data-toggle="collapse" data-target="#collapse1" aria-expanded="true" aria-controls="collapse1">information</button>
+                            </div>
+                            <div id="collapse1" class="collapse show" aria-labelledby="headingOne" data-parent="#accordion">
+                                <div class="panel-body">
+                                    <p id="description">Description here</p>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="panel">
+                            <div class="panel-header" id="headingTwo">
+                                <button class="panel-link" data-toggle="collapse" data-target="#collapse2" aria-expanded="false" aria-controls="collapse2">Recent News</button>
+                            </div>
+                            <div id="collapse2" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
+                                <div class="panel-body">
+
+                                    <p style="font-size: 20px;">To provide your feedback to this organization please email them at
+                                        <a href="#" id="email"></a>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- product section end -->
+
+
+    <!-- Footer section -->
+    <section class="footer-section">
+
+        <div class="social-links-warp">
+            <div class="container">
+                <div class="social-links" style="text-align:center;">
+                    <a href="" class="instagram"><i class="fa fa-instagram"></i><span>instagram</span></a>
+                    <a href="" class="facebook"><i class="fa fa-facebook"></i><span>facebook</span></a>
+                    <a href="" class="twitter"><i class="fa fa-twitter"></i><span>twitter</span></a>
+                    <a href="" class="linkedin"><i class="fa fa-linkedin"></i><span>LinkedIn</span></a>
+                </div>
+                <br>
+                <p class="text-white text-center mt-2">Copyright &copy;
+                    <script>
+                        document.write(new Date().getFullYear());
+                    </script> All rights reserved | Visit Developer Page</p>
+
+            </div>
+        </div>
+    </section>
+    <!-- Footer section end -->
+
+
 </body>
 
 </html>

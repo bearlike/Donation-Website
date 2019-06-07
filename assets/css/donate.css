@@ -1,0 +1,501 @@
+/*----------------------------------------*/
+/* Template default CSS
+/*----------------------------------------*/
+html,
+body {
+  height: 100%;
+  font-family: 'Josefin Sans', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  font-smoothing: antialiased;
+}
+
+header {
+  font-size: 14px;
+  font-family: "Poppins", sans-serif;
+}
+
+header ul {
+    display: block;
+    list-style-type: disc;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    padding-inline-start: 40px;
+}
+
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+  color: #111111;
+  font-weight: 600;
+}
+
+h1 {
+  font-size: 70px;
+}
+
+h2 {
+  font-size: 36px;
+}
+
+h3 {
+  font-size: 30px;
+}
+
+h4 {
+  font-size: 24px;
+}
+
+h5 {
+  font-size: 18px;
+}
+
+h6 {
+  font-size: 16px;
+}
+
+p {
+  font-size: 14px;
+  color: #918e8e;
+  line-height: 1.6;
+}
+
+img {
+  max-width: 100%;
+}
+
+input:focus,
+select:focus,
+button:focus,
+textarea:focus {
+  outline: none;
+}
+
+a:hover,
+a:focus {
+  text-decoration: none;
+  outline: none;
+}
+
+ul,
+ol {
+  padding: 0;
+  margin: 0;
+}
+/*---------------------
+  Commom elements
+-----------------------*/
+/* buttons */
+.site-btn {
+  display: inline-block;
+  border: none;
+  font-size: 14px;
+  font-weight: 600;
+  min-width: 167px;
+  padding: 18px 47px 14px;
+  border-radius: 50px;
+  text-transform: uppercase;
+  background: #df8b24;
+  color: #fff;
+  line-height: normal;
+  cursor: pointer;
+  text-align: center;
+}
+
+.site-btn:hover {
+  color: #fff;
+}
+
+.site-btn.sb-white {
+  background: #fff;
+  color: #111111;
+}
+
+.site-btn.sb-line {
+  background: transparent;
+  color: #fff;
+  -webkit-box-shadow: inset 0 0 0 1px #fff;
+  box-shadow: inset 0 0 0 1px #fff;
+}
+
+.site-btn.sb-dark {
+  background: #413a3a;
+}
+
+.site-btn.sb-dark.sb-line {
+  background-color: transparent;
+  color: #111111;
+  -webkit-box-shadow: inset 0 0 0 1px #111111;
+  box-shadow: inset 0 0 0 1px #111111;
+}
+
+/* Product Page */
+.donate-details .p-title {
+  font-size: 18px;
+  font-weight: 700;
+  color: #414141;
+  text-transform: uppercase;
+  margin-bottom: 18px;
+}
+
+.donate-details .p-price {
+  font-size: 24px;
+  color: #414141;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+.donate-details .p-stock {
+  font-size: 12px;
+  color: #000;
+  font-weight: 700;
+  color: #414141;
+  margin-bottom: 10px;
+}
+
+.donate-details .p-stock span {
+  color: #df8b24;
+}
+
+.donate-details .p-rating {
+  margin-bottom: 15px;
+}
+
+.donate-details .p-rating i {
+  color: #df8b24;
+}
+
+.donate-details .p-rating i.fa-fade {
+  color: #e6e6e6;
+}
+
+.donate-details .p-review {
+  margin-bottom: 30px;
+}
+
+.donate-details .p-review a {
+  color: #414141;
+  font-size: 14px;
+  margin-right: 12px;
+  margin-left: 12px;
+}
+
+.donate-details .p-review a:first-child {
+  margin-left: 0;
+}
+
+.donate-details .fw-size-choose {
+  border-bottom: none;
+  margin-bottom: 30px;
+  padding-bottom: 0;
+}
+
+.donate-details .fw-size-choose p {
+  float: left;
+  margin-right: 38px;
+  text-transform: uppercase;
+  font-weight: 700;
+  color: #414141;
+  padding-top: 10px;
+  margin-bottom: 0;
+}
+
+.donate-details .fw-size-choose label {
+  width: 33px;
+  height: 33px;
+  font-size: 12px;
+  border: 2px solid #414141;
+}
+
+.donate-details .fw-size-choose input[type=radio]:checked+label {
+  border: 2px solid #df8b24;
+}
+
+.donate-details .fw-size-choose .disable label {
+  border: 2px solid #e1e1e1;
+  color: #cacaca;
+}
+
+.donate-details .site-btn {
+  min-width: 190px;
+}
+
+/* Accordion */
+.accordion-area {
+  margin-top: 50px;
+  border-top: 2px solid #e1e1e1;
+}
+
+.accordion-area .panel {
+  border-bottom: 2px solid #e1e1e1;
+}
+
+.accordion-area .panel-link {
+  background-image: url("../img/arrow-down.png");
+  background-repeat: no-repeat;
+  background-position: right 10px top 30px;
+}
+
+.faq-accordion.accordion-area .panel-link,
+.faq-accordion.accordion-area .panel-link.active.collapsed {
+  padding: 17px 100px 17px 20px;
+}
+
+.faq-accordion.accordion-area .panel-link:after {
+  right: 44px;
+}
+
+.accordion-area .panel-header .panel-link.collapsed {
+  background-image: url("../img/arrow-down.png");
+}
+
+.accordion-area .panel-link.active {
+  background-image: url("../img/arrow-up.png");
+}
+
+.accordion-area .panel-link.active {
+  background-color: transparent;
+}
+
+.accordion-area .panel-link,
+.accordion-area .panel-link.active.collapsed {
+  text-align: left;
+  position: relative;
+  width: 100%;
+  font-size: 14px;
+  font-weight: 700;
+  color: #414141;
+  padding: 0;
+  text-transform: uppercase;
+  line-height: 1;
+  cursor: pointer;
+  border: none;
+  min-height: 69px;
+  background-color: transparent;
+  border-radius: 0;
+}
+
+.accordion-area .panel-body {
+  padding-top: 10px;
+}
+
+.accordion-area .panel-body p {
+  color: #8f8f8f;
+  margin-bottom: 25px;
+  line-height: 1.8;
+}
+
+.accordion-area .panel-body img {
+  margin-bottom: 25px;
+}
+
+.accordion-area .panel-body h4 {
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+
+/* ----------------
+  Footer section
+---------------------*/
+.footer-section {
+  background: #282828;
+}
+
+.footer-logo {
+  padding-bottom: 60px;
+}
+
+.footer-widget {
+  margin-bottom: 70px;
+  overflow: hidden;
+}
+
+.footer-widget h2 {
+  font-size: 18px;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #fff;
+  margin-bottom: 45px;
+}
+
+.footer-widget p {
+  color: #8f8f8f;
+}
+
+.footer-widget.about-widget p {
+  margin-bottom: 50px;
+  letter-spacing: -0.01em;
+}
+
+.footer-widget ul {
+  list-style: none;
+  float: left;
+  margin-right: 37px;
+}
+
+.footer-widget ul:last-child {
+  margin-right: 0;
+}
+
+.footer-widget ul li a {
+  display: inline-block;
+  position: relative;
+  padding-left: 20px;
+  font-size: 14px;
+  color: #8f8f8f;
+  margin-bottom: 6px;
+}
+
+.footer-widget ul li a:after {
+  position: absolute;
+  content: "";
+  width: 5px;
+  height: 5px;
+  left: 0;
+  top: 8px;
+  border: 1px solid #ec105a;
+  border-radius: 50%;
+  -webkit-transition: all 0.2s;
+  -o-transition: all 0.2s;
+  transition: all 0.2s;
+}
+
+.footer-widget ul li a:hover {
+  color: #fff;
+}
+
+.footer-widget ul li a:hover:after {
+  width: 7px;
+  height: 7px;
+  top: 6px;
+  background: #ec105a;
+}
+
+.fw-latest-post-widget .lp-item {
+  margin-bottom: 30px;
+  display: block;
+  overflow: hidden;
+}
+
+.fw-latest-post-widget .lp-thumb {
+  width: 64px;
+  height: 64px;
+  float: left;
+  margin-right: 22px;
+}
+
+.fw-latest-post-widget .lp-content {
+  overflow: hidden;
+  padding-top: 2px;
+}
+
+.fw-latest-post-widget .lp-content h6 {
+  font-size: 14px;
+  font-weight: 700;
+  text-transform: uppercase;
+  opacity: 0.25;
+  color: #717171;
+  margin-bottom: 1px;
+}
+
+.fw-latest-post-widget .lp-content span {
+  display: block;
+  font-size: 12px;
+  color: #8f8f8f;
+  margin-bottom: 4px;
+}
+
+.fw-latest-post-widget .lp-content .readmore {
+  font-size: 12px;
+  color: #df8b24;
+}
+
+.contact-widget .con-info span {
+  float: left;
+  color: #df8b24;
+  margin-right: 15px;
+  overflow: hidden;
+}
+
+.social-links-warp {
+  border-top: 2px solid #3b3535;
+  padding: 10px 0;
+}
+
+.social-links a {
+  margin-right: 60px;
+  display: inline-block;
+}
+
+.social-links a:last-child {
+  margin-right: 0;
+}
+
+.social-links a i {
+  font-size: 30px;
+  color: #d7d7d7;
+  float: left;
+  margin-right: 19px;
+  overflow: hidden;
+  -webkit-transition: all 0.3s;
+  -o-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+.social-links a span {
+  display: inline-block;
+  font-size: 12px;
+  font-weight: 600;
+  text-transform: uppercase;
+  color: #9f9fa0;
+  padding-top: 10px;
+  -webkit-transition: all 0.3s;
+  -o-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+.social-links a.instagram:hover i {
+  color: #98134e;
+}
+
+.social-links a.google-plus:hover i {
+  color: #E04B37;
+}
+
+.social-links a.twitter:hover i {
+  color: #5abed6;
+}
+
+.social-links a.pinterest:hover i {
+  color: #CD212D;
+}
+
+.social-links a.facebook:hover i {
+  color: #39599F;
+}
+
+.social-links a.twitter:hover i {
+  color: #5abed6;
+}
+
+.social-links a.youtube:hover i {
+  color: #D12227;
+}
+
+.social-links a.linkedin:hover i {
+  color: #4a7bec;
+}
+
+.social-links a.tumblr:hover i {
+  color: #37475E;
+}
+
+.social-links a:hover span {
+  color: #fff;
+}
