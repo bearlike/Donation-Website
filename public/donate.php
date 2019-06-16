@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-
+<?php include "donate_def.php"; ?>
 <head>
     <title>Donate | Bhumi Donation Platform</title>
     <meta charset="UTF-8">
@@ -17,6 +17,9 @@
     <link rel="stylesheet" href="https://cdn.rawgit.com/balzss/luxbar/ae5835e2/build/luxbar.min.css">
 		<link rel="stylesheet" href="../lib/font-awesome/4.7.0/css/font-awesome.css">
     <link rel="stylesheet" href="../assets/css/donate.css" />
+    <link rel="stylesheet" href="../lib/pace/pace.css">
+    <!-- Scripts -->
+    <script type="text/javascript" src="../lib/pace/pace.min.js"></script>
 </head>
 <header id="luxbar" class="luxbar-fixed">
   <input type="checkbox" class="luxbar-checkbox" id="luxbar-checkbox" />
@@ -29,7 +32,7 @@
       </li>
       <li class="luxbar-item"><a href="../index.html">Home</a></li>
       <li class="luxbar-item"><a href="../public/about.html">About</a></li>
-      <li class="luxbar-item"><a href="../public/donate.html">Donate</a></li>
+      <li class="luxbar-item"><a href="../public/donate.php">Donate</a></li>
       <li class="luxbar-item"><a href="../public/general-donation.html">General Donation</a></li>
     </ul>
   </div>
@@ -44,8 +47,9 @@
             <div class="row">
                 <div class="col-lg-6">
                     <div>
-                        <img src="../assets/img/donate/child.png" style="height: 450px;" alt="Bhumi - Child picture here">
-                        <h5 style="padding-top: 30px;">"I'm Tony Sethupathy and I'm a mechanic"</h5><br>
+                        <!-- <?php //echo "../uploads/".$url.".png"; ?>-->
+                        <img src=<?php echo $url; ?> style="height: 450px;" alt="Bhumi - Child picture here">
+                        <h5 style="padding-top: 30px;">"<?php echo $oneline; ?>"</h5><br>
                     </div>
 
                 </div>
@@ -53,25 +57,26 @@
 
                     <div class="p-review">
                         <label>Name</label>
-                        <h4 id="category">Tony Sethupathy</h4>
+                        <h4 id="category"><?php echo $name; ?></h4>
                     </div>
                     <div class="p-review">
                         <label>Fund Raised</label>
-                        <h4 id="fundRaised">Rs. 6969</h4>
+                        <h4 id="fundRaised">Rs. <?php echo ($funds_rec); ?></h4>
 
                     </div>
                     <div class="p-review">
                         <label>Fund Target</label>
-                        <h4 id="fundTarget">Rs. 10000</h4>
+                        <h4 id="fundTarget">Rs. <?php echo $funds_target; ?></h4>
                     </div>
                     <div class="p-review">
                         <label>Views</label>
-                        <h4 id="views">420</h4>
+                        <h4 id="views"><?php echo $views; ?></h4>
                     </div>
                     <div class="p-review">
                         <label>Claps</label>
                         <h4 class="claps">69</h4><img src="../assets/img/donate/clap.png" onClick="incrementClap()" style="width:30px; height:30px; cursor: pointer;">
                     </div>
+
                     <a href="#" class="site-btn">Donate Now</a>
                     <div id="accordion" class="accordion-area">
                         <div class="panel">
@@ -80,27 +85,12 @@
                             </div>
                             <div id="collapse1" class="collapse show" aria-labelledby="headingOne" data-parent="#accordion">
                                 <div class="panel-body">
-                                    <p id="description">Description here</p>
+                                    <p id="description"><?php echo $desc; ?></p>
                                 </div>
                             </div>
 
                         </div>
-                        <div class="panel">
-                            <div class="panel-header" id="headingTwo">
-                                <button class="panel-link" data-toggle="collapse" data-target="#collapse2" aria-expanded="false" aria-controls="collapse2">Recent News</button>
-                            </div>
-                            <div id="collapse2" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
-                                <div class="panel-body">
-
-                                    <p style="font-size: 20px;">To provide your feedback to this organization please email them at
-                                        <a href="#" id="email"></a>
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-
                     </div>
-
                 </div>
             </div>
         </div>
