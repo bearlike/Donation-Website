@@ -1,6 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
-<?php include "donate_def.php"; ?>
+<?php
+  if (empty($_GET)) {
+    // no data passed by get
+    echo "Hi";
+    header('Location: '."../lib/404/index.html");
+  }
+  else {
+    include "donate_def.php";
+  }
+?>
 <head>
     <title>Donate | Bhumi Donation Platform</title>
     <meta charset="UTF-8">
@@ -21,18 +30,19 @@
     <!-- Scripts -->
     <script type="text/javascript" src="../lib/pace/pace.min.js"></script>
 </head>
+
 <header id="luxbar" class="luxbar-fixed">
   <input type="checkbox" class="luxbar-checkbox" id="luxbar-checkbox" />
   <div class="luxbar-menu luxbar-menu-right luxbar-menu-dark">
     <ul class="luxbar-navigation">
       <li class="luxbar-header">
-        <a href="#" class="luxbar-brand"><img src="../assets/img/logo.png" style="width: 40%; height: 40%" alt="Bhumi Logo"></a> <label class="luxbar-hamburger luxbar-hamburger-doublespin" id="luxbar-hamburger" for="luxbar-checkbox">
+        <a href="#" class="luxbar-brand"><img src="../assets/img/logo.png" style="height: 40%; width: 40% " alt="Bhumi Logo"></a> <label class="luxbar-hamburger luxbar-hamburger-doublespin" id="luxbar-hamburger" for="luxbar-checkbox">
           <span></span>
         </label>
       </li>
       <li class="luxbar-item"><a href="../index.html">Home</a></li>
       <li class="luxbar-item"><a href="../public/about.html">About</a></li>
-      <li class="luxbar-item"><a href="../public/donate.php">Donate</a></li>
+      <li class="luxbar-item"><a href="../public/search.php">Children Page</a></li>
       <li class="luxbar-item"><a href="../public/general-donation.html">General Donation</a></li>
     </ul>
   </div>

@@ -1,0 +1,27 @@
+.likebt {
+  border-radius: 8px;
+  background-color: #da6635;
+  color: white;
+  padding-bottom: 4px;
+}
+
+.unlikebt {
+  border-radius: 8px;
+  padding-bottom: 4px;
+}
+
+.unlikebt:hover {
+  background-color: #da6635;
+  color: white;
+}
+
+.likes {
+  height: 20px;
+}
+
+.projectImg {
+  height: 250px;
+  width: 250px;
+  padding: 10px;
+  cursor: zoom-in;
+}
