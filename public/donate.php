@@ -3,7 +3,6 @@
 <?php
   if (empty($_GET)) {
     // no data passed by get
-    echo "Hi";
     header('Location: '."../lib/404/index.html");
   }
   else {

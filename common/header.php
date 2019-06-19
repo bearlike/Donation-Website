@@ -1,3 +1,5 @@
+<link href="../assets/img/logo.png" rel="shortcut icon" />
+
 <header id="luxbar" class="luxbar-fixed">
   <input type="checkbox" class="luxbar-checkbox" id="luxbar-checkbox" />
   <div class="luxbar-menu luxbar-menu-right luxbar-menu-dark">

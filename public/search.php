@@ -119,7 +119,60 @@
     <?php
       include 'init_con.php';
 
-      $sql = "SELECT * FROM children;";
+      if (empty($_GET)) {
+        // no data passed by get
+        $sql = "SELECT * FROM children;";
+      }
+      else {
+        // IF Only Keyword is given
+          $keyword = $_GET["keyword"];
+          // For Determining Sex criterias
+          if ($_GET["sex"] == "A") {
+            $sp1 = "";
+          }
+          elseif ($_GET["sex"] == "M") {
+            $sp1 = " and sex = 'M'";
+          }
+          elseif ($_GET["sex"] == "F") {
+            $sp1 = " and sex = 'F' ";
+          }
+          elseif ($_GET["sex"] == "O") {
+            $sp1 = " and sex = 'O' ";
+          }
+          // For Determining state criterias
+          if ($_GET["state"] == "All") {
+            $sp2 = "";
+          }
+          else {
+            $sp2 = " and state = '".$_GET["state"]."' ";
+          }
+          // For Determining age criterias
+          if ($_GET["age"] == "All") {
+            $sp3 = "";
+          }
+          elseif ($_GET["age"] == "0") {
+            $sp3 = " and TIMESTAMPDIFF(YEAR, dob, CURDATE()) >= 0 and TIMESTAMPDIFF(YEAR, dob, CURDATE()) <5 ";
+          }
+          elseif ($_GET["age"] == "5") {
+            $sp3 = " and TIMESTAMPDIFF(YEAR, dob, CURDATE()) >= 5 and TIMESTAMPDIFF(YEAR, dob, CURDATE()) <10 ";
+          }
+          elseif ($_GET["age"] == "10") {
+            $sp3 = " and TIMESTAMPDIFF(YEAR, dob, CURDATE()) >= 10 and TIMESTAMPDIFF(YEAR, dob, CURDATE()) <28 ";
+          }
+          // For order_by criterias
+          if ($_GET["order_by"] == "alphabetical") {
+            $sp4 = " order by cname ";
+          }
+          elseif ($_GET["order_by"] == "oldest") {
+            $sp4 = " order by cid ";
+          }
+          else {
+            $sp4 = " order by cid desc ";
+          }
+          $temp = $sp1. $sp2. $sp3. $sp4;
+          $sql = "SELECT * FROM children where cname like '%".$keyword."%'".$temp.";";
+          //echo $sql;   //For Testing reasons
+      }
       $result = $conn->query($sql);
       if ($result->num_rows > 0) {
         $id=0;
