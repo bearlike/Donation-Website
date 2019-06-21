@@ -3,7 +3,7 @@
 <?php
   if (empty($_GET)) {
     // no data passed by get
-    header('Location: '."../lib/404/index.html");
+    header('Location: '."../common/404.html");
   }
   else {
     include "donate_def.php";

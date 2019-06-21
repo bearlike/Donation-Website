@@ -1,0 +1,138 @@
+/*  title: Stylesheet for 404 Page - Bhumi
+ *  @author: Krishnakanth Alagiri (KK)
+ *  @description: 404 page for Bhumi inspired by some random 404 page on the page
+ */
+  html {
+    font-family: sans-serif;
+    line-height: 1.15;
+    -ms-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;
+  }
+
+  body,
+  a {
+    background-color: transparent;
+    -webkit-text-decoration-skip: objects;
+    color: #d16720;
+    background-color: #f5f5f5;
+  }
+
+  div {
+    display: block;
+  }
+
+  .content {
+    padding-top: 120px;
+    width: 720px;
+    margin: 0 auto;
+  }
+
+  .preamble {
+    margin-top: 50px;
+  }
+
+  .content .circle {
+    width: 304px;
+    height: 304px;
+    text-align: center;
+    color: #fff;
+    border-radius: 50%;
+    float: left;
+    -webkit-shape-outside: circle() margin-box;
+    shape-outside: circle() margin-box;
+    margin: 36px;
+  }
+
+  .info-header {
+    font-size: 38px;
+    font-family: 'Roboto', sans-serif;
+  }
+
+  .info-text {
+    font-size: 14px;
+    line-height: 22px;
+    font-family: 'Open Sans', sans-serif;
+  }
+
+  .circle {
+    background: linear-gradient(to right, #96e082, #da786b);
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+  }
+
+  .content .circle .circle-header {
+    font-family: 'Roboto Slab', serif;
+    color: #fff;
+    margin-top: 120px;
+    font-size: 90px;
+    line-height: 12px;
+    letter-spacing: 4px;
+  }
+
+  .button-list li {
+    display: inline-block;
+    list-style: none;
+    font-size: 13px;
+    font-size: 1.3em;
+    padding-right: 20px;
+    font-size: 14px;
+    font-family: 'Open Sans', sans-serif;
+  }
+
+  li {
+    display: list-item;
+    text-align: -webkit-match-parent;
+  }
+
+  .content .circle .circle-text {
+    line-height: 0;
+    font-size: 14px;
+    font-weight: 100;
+    letter-spacing: 3px;
+  }
+
+  .footer {
+    width: 720px;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  .button-list {
+    margin-top: 40px;
+    text-decoration: none;
+  }
+
+/* Button CSS */
+.btn {
+  text-decoration: none;
+  border: none;
+  overflow: hidden;
+  color: white;
+  height: 40px;
+  width: 150px;
+  margin: 1rem;
+  padding: 0.6em;
+  padding-right: 1.0em;
+  text-transform: uppercase;
+  text-align: center;
+  vertical-align: middle;
+}
+
+.btn-border.color-3 {
+  background-color: transparent;
+  border: 1px solid #f6774f;
+  color: #f6774f;
+  transition: 0.3s;
+}
+
+.btn-border.color-3:hover {
+  background: linear-gradient(to right, #96e082, #da786b);
+  border: 1px solid #fff;
+  color: #fff;
+  transition: 0.3s;
+}
+
+.btn-round {
+  border-radius: 10em;
+}
