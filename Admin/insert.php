@@ -1,7 +1,7 @@
 <?php
 /* Retrieving Variables from POST */
 $cname = '"'.$_POST['name'].'"';
-$dob = $_POST['dob'];
+$dob = '"'.$_POST['dob'].'"';
 $sex = '"'.$_POST['sex'].'"';
 $state = '"'.$_POST['state'].'"';
 $city = '"'.$_POST['city'].'"';
