@@ -5,7 +5,7 @@ $username = "root";
 //$password = "password";
 // Uncomment below statement if your password is empty
 $password = "";
-$dbname = "donate";
+$dbname = "donation";
 
 // Create connection
 $conn = new mysqli($servername, $username, $password, $dbname);

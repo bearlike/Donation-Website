@@ -170,17 +170,18 @@
             $sp4 = " order by cid desc ";
           }
           $temp = $sp1. $sp2. $sp3. $sp4;
-          $sql = "SELECT * FROM children where cname like '%".$keyword."%'".$temp.";";
+          $sql = "SELECT cname, if_show_image, sex, tags FROM children where cname like '%".$keyword."%'".$temp.";";
           //echo $sql;   //For Testing reasons
       }
       $result = $conn->query($sql);
-      if ($result->num_rows > 0) {
+      if (!empty($result)) {
         $id=0;
         while ($row = $result->fetch_assoc()) {
           $title = $row["cname"];
 
           if ($row['if_show_image'] != 0)
             $url = "../uploads/".$row['cid'].".png";
+  
           else
             $url = "../uploads/default/".ucfirst($row['sex']).".png";
 
@@ -213,7 +214,7 @@
         }
       }
       else{
-        echo "<h3>No Projects to Display.</h3>";
+        echo "<h3>No Children to Display.</h3>";
       }
     ?>
     <script type='text/javascript'>
