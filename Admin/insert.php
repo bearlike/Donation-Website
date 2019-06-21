@@ -19,40 +19,19 @@ if(!empty($cname) || !empty($dob) || !empty($sex) || !empty($state) || !empty($c
   $dbpassword= "";
   $dbname= "donation";
 
-    $conn = new mysqli($host, $dbusername, $dbpassword, $dbname);
+  $conn = new mysqli($host, $dbusername, $dbpassword, $dbname);
 
-    if (mysqli_connect_error()) {
-        die('connect Error('. mysqli_connect_errno().')'.mysqli_connect_error());
-    } else {
-      /*$SELECT = "SELECT cname From children Where cname = ? Limit 10";
-      $INSERT ="INSERT INTO children (cname,dob,sex,state,city,tags,one_liner,fund_target,achi,descri) values
-      (?,?,?,?,?,?,?,?,?,?)";
-      */
-      $sql ="INSERT INTO children (cname,dob,sex,state,city,tags,one_liner,fund_target,achi,description) values (".
-      $cname.",".$dob.",".$sex.",".$state.",".$city.",".$tags.",".$one_liner.",".$fund_target.",".$achi.",".$descri.");";
+  if (mysqli_connect_error()) {
+    die('connect Error('. mysqli_connect_errno().')'.mysqli_connect_error());
+  }
+  else {
+    $sql    = "SELECT max(cid) as c_count FROM children";
+    $result = $conn -> query($sql);
 
-      /*
-      echo $INSERT;
-      $stmt = $conn->prepare($SELECT);
-      $stmt->bind_param("s", $cname);
-      $stmt->execute();
-      $stmt->bind_result($cname);
-      $stmt->store_result();
-      $rnum = $stmt->num_rows;
+    if ($row = $result -> fetch_assoc()) {
+      $cid = $row['c_count'] + 1;
+      $sql ="INSERT INTO children (cid, cname,dob,sex,state,city,tags,one_liner,fund_target,achi,description) values (".$cid.",".$cname.",".$dob.",".$sex.",".$state.",".$city.",".$tags.",".$one_liner.",".$fund_target.",".$achi.",".$descri.");";
 
-      if($rnum==0) {
-        $stmt->close();
-
-        $stmt = $conn->prepare($INSERT);
-        $stmt->bind_param("sisssssiss",$cname,$dob,$sex,$state,$city,$tags,$one_liner,$fund_target,$achi,$descri);
-        $stmt->execute();
-        echo "New record has been inserted successfully";
-      }else {
-        echo "username already taken";
-      }
-      $stmt->close();
-      $conn->close();
-      */
       if ($conn->query($sql) === TRUE) {
         echo "New record created successfully";
       }
@@ -61,9 +40,11 @@ if(!empty($cname) || !empty($dob) || !empty($sex) || !empty($state) || !empty($c
       }
     }
 
-} else {
-    echo "All the fields are required";
-    header('Location: '."https://google.com");
-    die();
+  }
 }
- ?>
+else {
+  echo "All the fields are required";
+  header('Location: '."https://google.com");
+  die();
+}
+?>
