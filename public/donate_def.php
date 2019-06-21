@@ -41,6 +41,6 @@ if ($row = $result -> fetch_assoc()) {
 }
 // If cid not found (~404 Page)
 else {
-  header('Location: '."https://google.com");
+  header('Location: '."../common/404.html");
 }
  ?>
