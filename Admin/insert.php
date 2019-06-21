@@ -49,7 +49,7 @@ else {
   }
   else {
     echo "All the fields are required";
-    header('Location: '."https://google.com");
+    header('Location: '."../common/404.html");
     die();
   }
 }
