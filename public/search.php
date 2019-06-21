@@ -88,7 +88,6 @@
           <option value="Uttar Pradesh">Uttar Pradesh</option>
           <option value="West Bengal">West Bengal</option>
         </select>
-        </select>
       </div>
       <div class="selects-container">
         <p>Age:</p>
@@ -181,7 +180,7 @@
 
           if ($row['if_show_image'] != 0)
             $url = "../uploads/".$row['cid'].".png";
-  
+
           else
             $url = "../uploads/default/".ucfirst($row['sex']).".png";
 
