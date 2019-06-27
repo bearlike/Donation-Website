@@ -16,7 +16,7 @@ if ($row = $result -> fetch_assoc()) {
      *   0 -> Not show image
      *   1 -> Show image
      */
-    if ($row[if_show_image] != 0)
+    if ($row["if_show_image"] != 0)
       $url = "../uploads/".$row['cid'].".png";
     else
       $url = "../uploads/default/".ucfirst($row['sex']).".png";

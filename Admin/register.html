@@ -8,26 +8,51 @@
   <title>Upload Form | Bhumi Donation Platform</title>
   <!-- stylesheet -->
   <link rel="stylesheet" href="https://unpkg.com/purecss@1.0.0/build/pure-min.css" integrity="sha384-nn4HPE8lTHyVtfCBi5yW9d20FjT8BJwUXyWZT9InLYax14RDjBj46LmSztkmNP9w" crossorigin="anonymous">
+  <style>
+    .header {
+      margin: 0;
+      color: #333;
+      text-align: center;
+    }
+
+    .header h1 {
+      margin: 0.2em 0;
+      font-size: 3em;
+      font-weight: 300;
+    }
+
+    .header h2 {
+      font-weight: 300;
+      color: #ccc;
+      padding: 0;
+      margin-top: 0;
+    }
+  </style>
 </head>
 
 <body>
-  <p>
-    <center>
-      <h3>Children Upload Form</h3>
-      <span class="pure-form-message-inline">All fields are compulsory</span>
-    </center>
-  </p>
+  <!-- Header -->
+  <div class="header">
+    <h1>Moderators</h1>
+    <h2>Children Upload Form</h2>
+    <span class="pure-form-message-inline">All fields are compulsory</span>
+  </div>
+  <!-- Lazy Padding -->
+  <br><br>
   <form action="insert.php" class="pure-form pure-form-aligned" method="POST">
+    <!-- Name -->
     <div class="pure-control-group">
       <label for="Name">Name</label>
       <input type="text" placeholder="Name" name="name" required>
     </div>
 
+    <!-- DOB -->
     <div class="pure-control-group">
       <label for="dob">Date of Birth</label>
       <input type="date" name="dob" required>
     </div>
 
+    <!-- Sex -->
     <div class="pure-control-group">
       <label for="sex">Sex</label>
       <select name="sex" required>
@@ -37,6 +62,7 @@
       </select>
     </div>
 
+    <!-- State -->
     <div class="pure-control-group">
       <label for="state">State</label>
       <select name="state" required>
@@ -78,43 +104,54 @@
       </select>
     </div>
 
+    <!-- City -->
     <div class="pure-control-group">
       <label for="city">City</label>
       <input type="text" name="city" required>
     </div>
 
+    <!-- Tags -->
     <div class="pure-control-group">
       <label for="tags">Tags</label>
       <input type="text" name="tags" required>
     </div>
+
+    <!-- One Liners -->
     <div class="pure-control-group">
       <label for="one_liner">One Liners</label>
       <input type="text" name="one_liner" required>
     </div>
 
+    <!-- Description -->
     <div class="pure-control-group">
       <label for="descri">Description</label>
       <input type="text" name="descri" required>
     </div>
+
+    <!-- Fund Target -->
     <div class="pure-control-group">
       <label for="fund_target">Fund Target (Rs.)</label>
       <input type="number" name="fund_target" required>
     </div>
 
+    <!-- Achievements -->
     <div class="pure-control-group">
       <label for="achi">Achievements</label>
       <input type="text" name="achi" required>
     </div>
 
+    <!-- Upload Image -->
     <div class="pure-control-group">
       <label for="file">Upload Image</label>
       <input type="file">
     </div>
+
+    <!-- Submit Button -->
     <center>
-    <div class="pure-control-group">
-      <input type="submit" class="pure-button pure-button-primary" value="Click here to submit">
-    </div>
-  </center>
+      <div class="pure-control-group">
+        <input type="submit" class="pure-button pure-button-primary" value="Click here to submit">
+      </div>
+    </center>
 
   </form>
 </body>
