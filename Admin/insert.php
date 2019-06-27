@@ -5,16 +5,18 @@ if (empty($_POST)) {
   header('Location: '."../common/404.html");
 }
 else {
-  $cname = '"'.ucfirst($_POST['name']).'"';
-  $dob = '"'.$_POST['dob'].'"';
-  $sex = '"'.ucfirst($_POST['sex']).'"';
-  $state = '"'.ucfirst($_POST['state']).'"';
-  $city = '"'.ucfirst($_POST['city']).'"';
-  $tags = '"'.$_POST['tags'].'"';
-  $one_liner = '"'.ucfirst($_POST['one_liner']).'"';
+  $images      = $_POST['images'];
+  echo $images;
+  $dob         = '"'.$_POST['dob'].'"';
+  $tags        = '"'.$_POST['tags'].'"';
   $fund_target = '"'.$_POST['fund_target'].'"';
-  $achi = '"'.ucfirst($_POST['achi']).'"';
-  $descri ='"'.ucfirst($_POST['descri']).'"';
+  $cname       = '"'.ucfirst($_POST['name']).'"';
+  $sex         = '"'.ucfirst($_POST['sex']).'"';
+  $state       = '"'.ucfirst($_POST['state']).'"';
+  $city        = '"'.ucfirst($_POST['city']).'"';
+  $one_liner   = '"'.ucfirst($_POST['one_liner']).'"';
+  $achi        = '"'.ucfirst($_POST['achi']).'"';
+  $descri      ='"'.ucfirst($_POST['descri']).'"';
 
   /* Check if no Variables are empty */
   if(!empty($cname) || !empty($dob) || !empty($sex) || !empty($state) || !empty($city) || !empty($tags) || !empty($one_liner) || !empty($fund_target) || !empty($achi)|| !empty($descri))

@@ -88,6 +88,7 @@
           <option value="Uttar Pradesh">Uttar Pradesh</option>
           <option value="West Bengal">West Bengal</option>
         </select>
+        </select>
       </div>
       <div class="selects-container">
         <p>Age:</p>
@@ -169,7 +170,7 @@
             $sp4 = " order by cid desc ";
           }
           $temp = $sp1. $sp2. $sp3. $sp4;
-          $sql = "SELECT cname, if_show_image, sex, tags FROM children where cname like '%".$keyword."%'".$temp.";";
+          $sql = "SELECT cid, cname, if_show_image, sex, tags FROM children where cname like '%".$keyword."%'".$temp.";";
           //echo $sql;   //For Testing reasons
       }
       $result = $conn->query($sql);
