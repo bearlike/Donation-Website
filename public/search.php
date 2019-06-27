@@ -1,9 +1,7 @@
 <html>
-
 <?php
   include 'init_con.php';
 ?>
-
 <head>
     <title>Donate | Bhumi Donation Platform</title>
     <meta charset="UTF-8">
@@ -13,27 +11,60 @@
     <!-- Scripts -->
     <script type="text/javascript" src="../lib/pace/pace.min.js"></script>
     <!-- Stylesheets -->
-    <link rel="stylesheet" type="text/css" href="https://cdn.rawgit.com/balzss/luxbar/ae5835e2/build/luxbar.min.css">
     <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Open+Sans|Raleway&display=swap">
+    <link href="https://fonts.googleapis.com/css?family=Poppins|Roboto&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="https://cdn.rawgit.com/balzss/luxbar/ae5835e2/build/luxbar.min.css">
+    <link rel="stylesheet" type="text/css" href="../lib/pace/pace.css">
     <link rel="stylesheet" type="text/css" href="../assets/css/projects.css" />
     <link rel="stylesheet" type="text/css" href="../lib/bootstrap/test-bs.css" />
-    <link rel="stylesheet" type="text/css" href="../lib/pace/pace.css">
+    <link rel="stylesheet" type="text/css" href="../lib/font-awesome/4.7.0/css/font-awesome.css">
     <link rel="stylesheet" type="text/css" href="../lib/w3/w3.css">
+
     <style>
-        body {
-        			font-family: 'Raleway', sans-serif;
-        			font-family: 'Open Sans', sans-serif;
-              color: #000;
-        		}
+      body {
+      	font-family: 'Raleway', sans-serif;
+      	font-family: 'Open Sans', sans-serif;
+        color: #000;
+      }
+      body a {
+        color: #000;
+      }
+      .luxbar-item {
+        font-family: 'Poppins', sans-serif;
+        font-size: 14px;
+      }
+      .badge-default {
+          background-color: #4285f4!important;
+          color: #fff!important;
+      }
+      .badge {
+          border-radius: .125rem;
+          color: #fff!important;
+      }
+      @media (prefers-reduced-motion: reduce)
+      .badge {
+          transition: none;
+      }
+      .badge {
+          display: inline-block;
+          padding: .25em .4em;
+          font-size: 76%;
+          font-weight: 700;
+          line-height: 1;
+          text-align: center;
+          white-space: nowrap;
+          vertical-align: baseline;
+          border-radius: .15rem;
+          transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+      }
     </style>
 </head>
-
 <?php include "../common/header.php"; ?>
-
 <body>
   <!-- Lazy Padding -->
   <br><br><br>
   <!-- Search Container -->
+  <center>
   <form method="get" action="search.php" accept-charset="UTF-8">
     <input name="_token" type="hidden">
     <div id="main-search-fields">
@@ -41,6 +72,7 @@
       <input name="keyword" autocomplete="off" type="search">
       <div class="selects-container">
         <p>Gender:</p>
+        <!-- Sex Selection -->
         <select name="sex">
           <option value="A">All</option>
           <option value="M">Male</option>
@@ -48,6 +80,7 @@
           <option value="O">Others</option>
         </select>
       </div>
+      <!-- State Selection -->
       <div class="selects-container">
         <p>State:</p>
         <select name="state">
@@ -90,6 +123,7 @@
         </select>
         </select>
       </div>
+      <!-- Age Selection -->
       <div class="selects-container">
         <p>Age:</p>
         <select name="age">
@@ -99,6 +133,7 @@
           <option value="0">0-5 years</option>
         </select>
       </div>
+      <!-- "Order By" Selection -->
       <div class="selects-container selects-container-last">
         <p>Order By:</p>
         <select name="order_by">
@@ -112,6 +147,7 @@
       <input class="button-green-download2-big" type="submit" value="Search">
     </div>
   </form>
+  </center>
   <!-- Lazy Padding -->
   <br><br>
   <!-- Kids Container -->
@@ -184,7 +220,6 @@
 
           else
             $url = "../uploads/default/".ucfirst($row['sex']).".png";
-
           echo "
                 <div class='w3-btn w3-col m4 l3 '>
                   <div class='card w3-display-container'>
@@ -203,27 +238,34 @@
           $tags = str_replace(", ",",",$tags);
           $tags = str_replace(" ,",",",$tags);
           $tags = str_replace(",",", ",$tags);
-
-          if(strlen($tags) > $maxLen)
-          {
-            $tags = substr($tags, 0, $maxLen);
-            $tags = $tags."...";
+          $p = (explode(", ",$tags));
+          $tempc = 1;
+          echo "<center><b>".ucfirst($title)."<br>&nbsp;</b> ";
+          foreach($p as $tag) {
+            $tempc = $tempc + 1;
+            echo "<span class=\"badge badge-default\">".ucfirst($tag)."</span>  ";
+            if ($tempc > 2) {
+              $tempc = 0;
+              break;
+            }
           }
-
-          echo "<center><b>".ucfirst($title)."<br>Tags:</b> ".$tags."</center></a></div>";
+          echo "</center></a></div>";
         }
       }
       else{
         echo "<h3>No Children to Display.</h3>";
       }
     ?>
+    </div>
     <script type='text/javascript'>
       function redir() {
         window.open('donate.php?id='+event.srcElement.id,'_self');
       }
     </script>
+    <br><br>
     <!-- Call footer.php for Footer Bar-->
-    <!--Footer to be added-->
+    <?php include "..//common//footer.php"; ?>
+
 </body>
 
 </html>

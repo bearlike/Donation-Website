@@ -1,0 +1,286 @@
+/*----------------------------------------*/
+/* Template default CSS
+/*----------------------------------------*/
+.footer-section  {
+  -webkit-font-smoothing: antialiased;
+  font-smoothing: antialiased;
+}
+
+
+.footer-section p {
+  font-size: 14px;
+  color: #918e8e;
+  line-height: 1.6;
+}
+
+.footer-section img {
+  max-width: 100%;
+}
+
+.footer-section input:focus,
+.footer-section select:focus,
+.footer-section button:focus,
+.footer-section textarea:focus {
+  outline: none;
+}
+
+.footer-section a:hover,
+.footer-section a:focus {
+  text-decoration: none;
+  outline: none;
+}
+
+.footer-section ul,
+.footer-section ol {
+  padding: 0;
+  margin: 0;
+}
+/*---------------------
+  Commom elements
+-----------------------*/
+/* buttons */
+.footer-section .site-btn {
+  display: inline-block;
+  border: none;
+  font-size: 14px;
+  font-weight: 600;
+  min-width: 167px;
+  padding: 18px 47px 14px;
+  border-radius: 50px;
+  text-transform: uppercase;
+  background: #df8b24;
+  color: #fff;
+  line-height: normal;
+  cursor: pointer;
+  text-align: center;
+}
+
+.footer-section .site-btn:hover {
+  color: #fff;
+}
+
+.footer-section .site-btn.sb-white {
+  background: #fff;
+  color: #111111;
+}
+
+.footer-section .site-btn.sb-line {
+  background: transparent;
+  color: #fff;
+  -webkit-box-shadow: inset 0 0 0 1px #fff;
+  box-shadow: inset 0 0 0 1px #fff;
+}
+
+.footer-section .site-btn.sb-dark {
+  background: #413a3a;
+}
+
+.footer-section .site-btn.sb-dark.sb-line {
+  background-color: transparent;
+  color: #111111;
+  -webkit-box-shadow: inset 0 0 0 1px #111111;
+  box-shadow: inset 0 0 0 1px #111111;
+}
+
+
+/* ----------------
+  Footer section
+---------------------*/
+.footer-section {
+  background: #282828;
+  font-family: 'Josefin Sans', sans-serif;
+}
+
+.footer-logo {
+  padding-bottom: 60px;
+}
+
+.footer-widget {
+  margin-bottom: 70px;
+  overflow: hidden;
+  font-family: 'Josefin Sans', sans-serif;
+}
+
+.footer-widget h2 {
+  font-size: 18px;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #fff;
+  margin-bottom: 45px;
+}
+
+.footer-widget p {
+  color: #8f8f8f;
+}
+
+.footer-widget.about-widget p {
+  margin-bottom: 50px;
+  letter-spacing: -0.01em;
+}
+
+.footer-widget ul {
+  list-style: none;
+  float: left;
+  margin-right: 37px;
+}
+
+.footer-widget ul:last-child {
+  margin-right: 0;
+}
+
+.footer-widget ul li a {
+  display: inline-block;
+  position: relative;
+  padding-left: 20px;
+  font-size: 14px;
+  color: #8f8f8f;
+  margin-bottom: 6px;
+}
+
+.footer-widget ul li a:after {
+  position: absolute;
+  content: "";
+  width: 5px;
+  height: 5px;
+  left: 0;
+  top: 8px;
+  border: 1px solid #ec105a;
+  border-radius: 50%;
+  -webkit-transition: all 0.2s;
+  -o-transition: all 0.2s;
+  transition: all 0.2s;
+}
+
+.footer-widget ul li a:hover {
+  color: #fff;
+}
+
+.footer-widget ul li a:hover:after {
+  width: 7px;
+  height: 7px;
+  top: 6px;
+  background: #ec105a;
+}
+
+.fw-latest-post-widget .lp-item {
+  margin-bottom: 30px;
+  display: block;
+  overflow: hidden;
+}
+
+.fw-latest-post-widget .lp-thumb {
+  width: 64px;
+  height: 64px;
+  float: left;
+  margin-right: 22px;
+}
+
+.fw-latest-post-widget .lp-content {
+  overflow: hidden;
+  padding-top: 2px;
+}
+
+.fw-latest-post-widget .lp-content h6 {
+  font-size: 14px;
+  font-weight: 700;
+  text-transform: uppercase;
+  opacity: 0.25;
+  color: #717171;
+  margin-bottom: 1px;
+}
+
+.fw-latest-post-widget .lp-content span {
+  display: block;
+  font-size: 12px;
+  color: #8f8f8f;
+  margin-bottom: 4px;
+}
+
+.fw-latest-post-widget .lp-content .readmore {
+  font-size: 12px;
+  color: #df8b24;
+}
+
+.contact-widget .con-info span {
+  float: left;
+  color: #df8b24;
+  margin-right: 15px;
+  overflow: hidden;
+}
+
+.social-links-warp {
+  border-top: 2px solid #3b3535;
+  padding: 10px 0;
+}
+
+.social-links a {
+  margin-right: 60px;
+  display: inline-block;
+}
+
+.social-links a:last-child {
+  margin-right: 0;
+}
+
+.social-links a i {
+  font-size: 30px;
+  color: #d7d7d7;
+  float: left;
+  margin-right: 19px;
+  overflow: hidden;
+  -webkit-transition: all 0.3s;
+  -o-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+.social-links a span {
+  display: inline-block;
+  font-size: 12px;
+  font-weight: 600;
+  text-transform: uppercase;
+  color: #9f9fa0;
+  padding-top: 10px;
+  -webkit-transition: all 0.3s;
+  -o-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+.social-links a.instagram:hover i {
+  color: #98134e;
+}
+
+.social-links a.google-plus:hover i {
+  color: #E04B37;
+}
+
+.social-links a.twitter:hover i {
+  color: #5abed6;
+}
+
+.social-links a.pinterest:hover i {
+  color: #CD212D;
+}
+
+.social-links a.facebook:hover i {
+  color: #39599F;
+}
+
+.social-links a.twitter:hover i {
+  color: #5abed6;
+}
+
+.social-links a.youtube:hover i {
+  color: #D12227;
+}
+
+.social-links a.linkedin:hover i {
+  color: #4a7bec;
+}
+
+.social-links a.tumblr:hover i {
+  color: #37475E;
+}
+
+.social-links a:hover span {
+  color: #fff;
+}
