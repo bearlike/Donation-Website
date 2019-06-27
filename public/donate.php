@@ -95,7 +95,6 @@
                     </div>
                     <!-- Likes -->
                     <div class="p-review">
-
                       <h4 class="claps">
                       <img src="../assets/img/donate/clap.png" onClick="incrementClap()" style="width:25px; height:25px; cursor: pointer;"> 69</h4><label>Likes</label>
                     </div>
